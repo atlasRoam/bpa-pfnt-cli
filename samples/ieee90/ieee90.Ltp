@@ -1,0 +1,136 @@
+.原卡片顺序：Case、FF、原顺序的SWI卡片、点去的卡片、没有转换的卡片、LTP卡片注释---------------------------------
+CASE IEEE9      
+.    MF    EPS      Tmax    HMax   HMin 
+FF   22   0.001      60.    10    0.0001
+REMOVE GOV ALL
+REMOVE TUR ALL
+. C IEEE 9 Nodes System                                                            
+GEN  GEN1     16.5 0 'EQPP' H .04    .06    .04    .06    2364.  1.  1.  100. 0.   .0608 .0969 .146  .0969 8.96 0.  .0336 0.    0.   0.   247.5 1.0 
+GEN  GEN2     18.0 0 'EQPP' S .089   .089   .033   .78    640.   1.  1.  100. 0.   .1189 .1969 .8958 .8645 6.00 .54 .0521 0.    0.   0.   192.  .85 
+EXC  GEN2     18.0 0 'FA' 0     0     0.    0     0     0.1   0.1   20.   0.200 1.166 0.000 0.    .314 .293  .104  -.398 3.98  .063  .35   0     0     0     0     0     0     Flag_EA_TO_FA 0.   
+PSS  GEN2     18.0 0 'SS' 0.    0.  0.5   0.  10.  0.2  1.3  .02  1.3  0.   0.   .05  2.0  0. 0        0.   
+TUR  GEN2     18.0 0 'GH' 180.   0.05  .04   1.0   5.0   .5    -0.1  0.1   .31   
+GEN  GEN3     13.8 0 'EQPP' S .107   .107   .033   .07    301.   1.  1.  100. 0.   .1813 .25   1.313 1.258 5.89 .6  .0742 0.    0.   0.   128.  .85 
+LOAD STATIONA 230. 0. 0.              9 'ST' B     1.0   1.0   0.    0.    0.    0.    0.    0.    0 
+.LOAD Name,   Base, ZONE,AREA,ID,'ST' SUB || Kpz,  Kqz,  Kpi,  Kqi,  Kpc,  Kqc,  Nfpz, Nfqz  FlagLE 
+LOAD STATIONB 230. 0. 0.              9 'ST' B     1.0   1.0   0.    0.    0.    0.    0.    0.    0 
+LOAD STATIONC 230. 0. 0.              9 'ST' B     1.0   1.0   0.    0.    0.    0.    0.    0.    0 
+(END)
+(START_OUTPUT)
+.发电机相对角输出----参考机--------输出机1 ...------
+.发电机变量输出-------------------------
+.母线变量输出---------------------------
+.支路（线路和变压器）变量输出---------------------------
+(END_OUTPUT)
+
+
+.-----------点去的卡片---------------------------------
+Swi LineNo:     3: .LS  STATIONB230.  GEN1    230.     1   0.0 
+Swi LineNo:     4: .LS -STATIONB230. -GEN1    230.     -1  0.0 
+Swi LineNo:    15: .EA GEN1   16.5 0.06 20. .20     0.  0.  .314.104.293-4.0 4.0 .063.35   
+Swi LineNo:    16: .EA GEN2   18.0 0.06 20. .20     0.  0.  .314.104.293-4.0 4.0 .063.35   
+Swi LineNo:    17: .EA GEN3   13.8 0.06 20. .20     0.  0.  .314.104.293-4.0 4.0 .063.35         
+
+.-----------没有转换的卡片---------------------------------
+Swi LineNo:    12: 
+Swi LineNo:    18: LO  GEN1    230.  STATIONA230.     .0300  .2550         .132   .132  
+Swi LineNo:    19: LO  GEN2    230.  STATIONB230.     .0510  .2760         .1185  .1185    
+Swi LineNo:    20: LO  STATIONA230.  GEN2    230.     .0960  .4830         .2295  .2295    
+Swi LineNo:    21: LO  STATIONB230.  GEN3    230.     .1070  .5100         .2685  .2685  
+Swi LineNo:    22: LO  GEN2    230.  STATIONC230.     .0255  .2160         .1118  .1118   
+Swi LineNo:    23: LO  STATIONC230.  GEN3    230.     .0357  .3024         .1568  .1568       
+Swi LineNo:    24: XO  GEN1    16.5  GEN1    230. 2     .0576
+Swi LineNo:    25: XO  GEN2    18.0  GEN2    230. 2     .0625  
+Swi LineNo:    26: XO  GEN3    13.8  GEN3    230. 2     .0586  
+Swi LineNo:    27: XR  STATIONA230.            -5.0   
+Swi LineNo:    28: XR  STATIONB230.            -10.   
+Swi LineNo:    29: XR  STATIONC230.            -5.0   
+Swi LineNo:    34: 
+
+.------------卡片注释--------------------------------
+.LS card 复故障
+.  BusName  BaseKv  BusName  BaseKv  ID  TYPE  T        R      X     %   Rd    Xd    NDE PHA SID
+LS  BusI    230.    BusJ     230.    0    9   0.36   0.0001  0.2001   0   0.0   0.0   3   1   1
+.LS card 切机切负荷
+.    BUS    BASEKV   ID  MDE  T    PP   QP   PC   QC   PZ   QZ  PG   TOTAL_GEN   TOTAL_LOAD Flag_LoadMW
+LS   Gen1    16.5    0   4    0.1  0    0    0    0    0    0   0    TOTAL_GEN    0         0
+LS   Bus1    115.    0   4    0.1  0.2  0.2  0    0    0    0   0    0            0         0
+
+.发电机卡片格式
+.GEN BusName Kv   ID Model Type Xdpp  Xqpp  Td0pp  Tq0pp Emws    P   Q MVABaseRa    Xd'   Xq'   Xd    Xq  Td0' Tq0'XL    SG10  SG12   D  MVARatg,PF ,Owner
+.GEN BusName Kv   ID Model TJ Pper Qper  MVABASE  Rs  Xs Xm    Rr   Xr PN    N 
+.GEN BusName Kv   ID Model TJ Pper Qper  MVABASE  Xpp  TEQ TIP    IPMAX   PN    N 
+.EXC card
+.EXC BusName KV  ID _FA_ RC   XC    TR    VIMAX VIMIN TB    TC    KA    TA    VRMAX VRMIN KE    TE   SE1  SE2    EFDmin EFD1   KF   TF     KC   KD    KB    KL    KH    VLR(KR)
+.EXC BusName KV  ID _FD_ RC   XC    TR    VIMAX VIMIN TB    TC    KA    TA    VRMAX VRMIN KE    TE   KI   KP     EFDmin Emax   KF   TF     KC   KD    KB    KL    KH    VLR(KR)
+.EXC BusName KV  ID _FE_ RC   XC    TR    VIMAX VIMIN TB    TC    KV    TRH   VRMAX VRMIN KE    TE   SE1  SE2    EFDmin EFD1   KF   TF     KC   KD    KB    KL    KH    VLR(KR)
+.EXC BusName KV  ID _FF_ RC   XC    TR    VAMAX VAMIN TB    TC    KA    TA    VRMAX VRMIN KE    TE   SE1  SE2    EFDmin EFD1   KF   TF     KC   KD    KB    KL    KH    VLR(KR)
+.EXC BusName KV  ID _FH_ RC   XC    TR    VIMAX VIMIN TB    TC    KA    TA    VAMAX VAMIN KE    TE   SE1  SE2    EFDmin EFD1   KF   TF     KC   KD    VLV   KLV   KN    KR
+.EXC BusName KV  ID _FM_ RC   XC    TR    K    KV   T1    T2    T3    T4    KA    TA     KF    TF  KH   VAMAX VAMIN KB   T5   KE    TE   SE1  SE2 VRMax VRmin KC  KD    KL1  VL1R EFDmax 
+.EXC                 'FX' RC   XC   TR   KA   TA   KP   KI   VRMAX VRMIN IKP  IKI   VFMAX VFMIN KT  TT  KIFD TIFD EFDmin EFDMAX
+.PSS                 'SH2'  T1    T2    T3    K0    K1    K2    K3   K    VsMax  VsMin KPM TPM     KPE TPE    KW    TW     TD1   TD2  KD1 T4   K4    KMVA
+.GOV and TUR card
+EXC BusName    KV  ID 'GG' Pmax   R    T1    T2    T3    T4    T5    F
+
+.负荷卡片格式
+.LOAD Name,   Base, ZONE,AREA,ID,'ST' A   || Kpz,  Kqz,  Kpi,  Kqi,  Kpc,  Kqc,  Kp1,  Kq1,  Nfpz, Nfqz
+.LOAD Name,   Base, ZONE,AREA,ID,'ST' B   || Kpz,  Kqz,  Kpi,  Kqi,  Kpc,  Kqc,  Nfpz, Nfqz
+.LOAD Name,   Base, ZONE,AREA,ID,'ST' C   || %Pfrac | Kpi,Kpc,Kp1,Kp2 | Nfp,Nvp1,Nfp1,Nvp2,Nfp2 | LFp,Vap,Vbp || %Qfrac | Kqi,Kqc,Kq1,Kq2 | Nfq,Nvq1,Nfq1,Nvq2,Nfp2 | LFq,Vaq,Vbq
+.LOAD Name,   Base, ZONE,AREA,ID,'ST' D   || %Pfrac | Nfpz,LFz,Vapz,Vbpz | Kpi,Nfpi,LFi,Vapi,Vbpi | Kpc,Nfpc,LFc,Vapc,Vbpc | Kp1,Nvp1,Nfp1,LF1,Vap1,Vbp1 | Kp2,Nvp2,Nfp2,LF2,Vap2,Vbp2 || %Qfrac | Nfqz,LFz,Vaqz,Vbqz | Kqi,Nfqi,LFi,Vaqi,Vbqi | Kqc,Nfqc,LFc,Vaqc,Vbqc | Kq1,Nvq1,Nfq1,LF1,Vaq1,Vbq1 | Kq2,Nvq2,Nfq2,LF2,Vaq2,Vbq2
+.LOAD Name,   Base, ZONE,        AREA,ID, 'MI'|| PerP,PerQ,Ini,Emws, Sj,  Rl,   Xl,   PQfact, Rs,   Xs,   Xm,   Rr,   Xr,   Vl, Tl,  A,    B
+.
+.负荷类型1: 40%恒定阻抗 + 30%恒定电流 + 20%恒定功率 + 10%的与频率有关的恒定功率(频率因子1.8和-2.0)
+.负荷类型2: 50%恒定阻抗 + 30%恒定电流 + 20%恒定功率，整体与频率相关(频率因子1.8和-2.0)
+.负荷类型3: 50%的马达负荷，定容量方式(Ini=0)：已知马达的动能和马达所有参数的基准功率值，求马达的初始滑差和惯性时间常数
+.                          定负载率方式(Ini=1)：已知马达的动能和负载率，求马达所有参数的基准功率值、初始滑差和惯性时间常数
+.
+.负荷类型1通过A型来表示，与BPA的LA模型基本一致
+.LOAD Name,   Base, ZONE,AREA,ID,'ST' A   || Kpz,  Kqz,  Kpi,  Kqi,  Kpc,  Kqc,  Kp1,  Kq1,  Nfpz, Nfqz
+LOAD Bus2     230.    0    0  0  'ST' A      0.4   0.4   0.3   0.3   0.2   0.2   0.1   0.1   1.8   -2.0
+.负荷类型2通过B型来表示，与BPA的LB模型基本一致
+.LOAD Name,   Base, ZONE,AREA,ID,'ST' B   || Kpz,  Kqz,  Kpi,  Kqi,  Kpc,  Kqc,  Nfpz, Nfqz
+LOAD Bus2     230.    0    0  0  'ST' B      0.5   0.5   0.3   0.3   0.2   0.2   1.8   -2.0
+.负荷类型1通过C型来表示
+.LOAD Name,   Base, ZONE,AREA,ID,'ST' C   || %Pfrac | Kpi,Kpc,Kp1,Kp2 | Nfp,Nvp1,Nfp1,Nvp2,Nfp2 | LFp,Vap,Vbp || %Qfrac | Kqi,Kqc,Kq1,Kq2 | Nfq,Nvq1,Nfq1,Nvq2,Nfp2 | LFq,Vaq,Vbq
+LOAD Bus2     230.    0    0  0  'ST' C      100.     0.3 0.2 0.1 0.0   0.0 0.0  1.8  0.0  0.0    0   0.5 0.0    100.     0.3 0.2 0.1 0.0   0.0 0.0  -2.  0.0  0.0    0   0.5 0.0
+.负荷类型2通过C型来表示
+.LOAD Name,   Base, ZONE,AREA,ID,'ST' C   || %Pfrac | Kpi,Kpc,Kp1,Kp2 | Nfp,Nvp1,Nfp1,Nvp2,Nfp2 | LFp,Vap,Vbp || %Qfrac | Kqi,Kqc,Kq1,Kq2 | Nfq,Nvq1,Nfq1,Nvq2,Nfp2 | LFq,Vaq,Vbq
+LOAD Bus2     230.    0    0  0  'ST' C      100.     0.3 0.2 0.0 0.0   1.8 0.0  0.0  0.0  0.0    0   0.5 0.0    100.     0.3 0.2 0.0 0.0   -2. 0.0  0.0  0.0  0.0    0   0.5 0.0
+.负荷类型1通过D型来表示
+.LOAD Name,   Base, ZONE,AREA,ID,'ST' D   || %Pfrac | Nfpz,LFz,Vapz,Vbpz | Kpi,Nfpi,LFi,Vapi,Vbpi | Kpc,Nfpc,LFc,Vapc,Vbpc | Kp1,Nvp1,Nfp1,LF1,Vap1,Vbp1 | Kp2,Nvp2,Nfp2,LF2,Vap2,Vbp2 || %Qfrac | Nfqz,LFz,Vaqz,Vbqz | Kqi,Nfqi,LFi,Vaqi,Vbqi | Kqc,Nfqc,LFc,Vaqc,Vbqc | Kq1,Nvq1,Nfq1,LF1,Vaq1,Vbq1 | Kq2,Nvq2,Nfq2,LF2,Vaq2,Vbq2
+LOAD BusA     230.    0    0  0  'ST' D      100.     0.0  0   0.5  0.0    0.3 0.0  0   0.5  0.0    0.2 0.0  0   0.50 0.0    0.1 0.0  1.8  0   0.5  0.0    0.0 0.0  0.0  0   0.5  0.0     100.     0.0  0   0.5  0.0    0.3 0.0  0   0.5  0.0    0.2 0.0  0   0.50 0.0    0.1 0.0  -2.  0   0.5  0.0    0.0 0.0  0.0  0   0.5  0.0
+.负荷类型2通过D型来表示
+.LOAD Name,   Base, ZONE,AREA,ID,'ST' D   || %Pfrac | Nfpz,LFz,Vapz,Vbpz | Kpi,Nfpi,LFi,Vapi,Vbpi | Kpc,Nfpc,LFc,Vapc,Vbpc | Kp1,Nvp1,Nfp1,LF1,Vap1,Vbp1 | Kp2,Nvp2,Nfp2,LF2,Vap2,Vbp2 || %Qfrac | Nfqz,LFz,Vaqz,Vbqz | Kqi,Nfqi,LFi,Vaqi,Vbqi | Kqc,Nfqc,LFc,Vaqc,Vbqc | Kq1,Nvq1,Nfq1,LF1,Vaq1,Vbq1 | Kq2,Nvq2,Nfq2,LF2,Vaq2,Vbq2
+LOAD BusA     230.    0    0  0  'ST' D      100.     1.8  0   0.5  0.0    0.3 1.8  0   0.5  0.0    0.2 1.8  0   0.50 0.0    0.0 0.0  0.0  0   0.5  0.0    0.0 0.0  0.0  0   0.5  0.0     100.     -2.  0   0.5  0.0    0.3 -2.  0   0.5  0.0    0.2 -2.  0   0.50 0.0    0.0 0.0  0.0  0   0.5  0.0    0.0 0.0  0.0  0   0.5  0.0
+.
+.马达负荷，定容量方式(Ini=0)
+.LOAD Name,   Base, ZONE,AREA,ID,'MI'|| PerP,PerQ,Ini,Emws, Sj,  Rl,   Xl,   PQVFact,Rs,   Xs,   Xm,   Rr,   Xr,   Vl, Tl,  A,    B
+LOAD Bus2     230.    0    0  0  'MI'   0.4  0.0  0   62.03 15.5 0.0   0.0   0.0     .0465 0.295 3.5   0.02  0.12  0.  0.   1.0   0.
+.马达负荷，定负载率方式(Ini=1)
+.LOAD Name,   Base, ZONE,AREA,ID,'MI'|| PerP,PerQ,Ini,Emws, KL,  Rl,   Xl,   PQVFact,Rs,   Xs,   Xm,   Rr,   Xr,   Vl, Tl,  A,    B
+LOAD Bus2     230.    0    0  0  'MI'   0.4  0.0  1   62.03 0.7  0.0   0.0   0.0     .0465 0.295 3.5   0.02  0.12  0.  0.   1.0   0.
+.马达负荷，定滑差方式(Ini=2)
+.LOAD Name,   Base, ZONE,AREA,ID,'MI'|| PerP,PerQ,Ini,Tj,   S0,  Rl,   Xl,   PQVFact,Rs,   Xs,   Xm,   Rr,   Xr,   Vl, Tl,  A,    B,
+LOAD Bus2     230.    0    0  0  'MI'   0.4  0.4  2   8.    0.01 0.0   0.0   0.0     .0465 0.295 3.5   0.02  0.12  0.  0.   1.0   0.
+.                          定滑差方式(Ini=2)：已知马达的初始滑差和惯性时间常数，求马达的动能和马达所有参数的基准功率值
+
+.两端直流系统的卡片格式
+.直流系统主数据(整理和逆变各一张，也可以合为一张)
+.HVDC2 BUSNAME BASEKV CO HZ FL TC   TVs   TVl   TDelay Valve  TD     T1   T2    T3    Ka  Mode MSU IMargin Alphastop
+HVDC2 RECBUSD  113.   CO 0  0  0.    .09   .09   0.2    100.   .05   .03   4.6   .012  249.  0  0 0.     100.  
+.直流系统的VDCOL(整理和逆变各一张，也可以合为一张)
+.HVDC2 BUSNAME BASEKV VD V1     V2       VLow  VHigh  ILimit  IMax TVDCOL
+HVDC2 RECBUSD  113.   VD -.10  -.10      .0    .70    0.1     1.2  0.00
+.直流系统的故障处理(一条直流线路一张)
+.HVDC2 BUSNAME BASEKV BUSNAME BASEKV FL   VStop   VBlock   VRecovery   Gmin  IOrderL  IOrderH  TBypassP  TBypassA  TBlockP  TBlockA  TRecovP  TIOrderF  TIOrderS    VDCNormal  IDCNormal
+HVDC2  BUS1D   113.   BUS2D   113.   FL   0.4     0.6      0.8         7.    0.3      0.6      0.0       0.02       0.6      1.0      0.02     0.02      0.1         0.8        0.9
+.直流系统调制
+.HVDC2 BUSNAME BASEKV LM   Td  Tf  Te   A   B   C   D   Kl  Pmin  Pmax  Mode BUSNAME BASEKV BUSNAME BASEKV
+.HVDC2 BUSNAME BASEKV HM   Td  Tf  Te   A   B   C   D   Kh  Pmin  Pmax  Mode BUSNAME BASEKV BUSNAME BASEKV
+.HVDC2 BUSNAME BASEKV DF   Td  Tf  Te   A   B   C   D   Kd  Pmin  Pmax       BUSNAME BASEKV BUSNAME BASEKV
+.HVDC2     'DM' ModelName MD Tvp IMAX IMIN TidMes KpI TiI MaxI MinI TGMes KpG TiGam MaxG MinG TvpS D dbg TvdclX1  Y1   X2  Y2   K1  K2  DownSpeedLimit UpSpeedLimit  γmin   Imargin  Deltγmin
+.DCON    'DN' ModelName  MDTvp IMAX IMIN   P_I  T_I P_U  T_U P_Gm T_Gm VacLo TVL IdLo TIdL Tl Tp Iovl Tim Tm D Dbg Tvdcl X1 Y1   X2   Y2   K1     K2 DownSpL UpSpL αstop γmin TvpSmall
+.LN card
+.LN BusName1 BaseKv1 BusName2 BaseKv2 BusName3 BaseKv3 BusName4 BaseKv4 BusName5 BaseKv5
+.MB card
+.MB BusName1 BaseKv1 BusName2 BaseKv2 BusName3 BaseKv3 BusName4 BaseKv4 BusName5 BaseKv5

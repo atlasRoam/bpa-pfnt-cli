@@ -1,0 +1,391 @@
+{
+  "schema_version": "bpa-pfnt-distribution/1.0",
+  "generated_at": "2026-07-27",
+  "assets": [
+    {
+      "path": "bpa_cli.exe",
+      "size": 7735085,
+      "sha256": "e3db8a7ecdc79481464bd070eaacb1515f0e3c6b6e8d1b9c9715b8d1c331b5db"
+    },
+    {
+      "path": "runtime/pfnt/DATOOL.DLL",
+      "size": 91648,
+      "sha256": "c89795958ea5deb758e928b3c0c0103b086948629b8958a309ceb49961dc3c7e"
+    },
+    {
+      "path": "runtime/pfnt/MFC30.DLL",
+      "size": 348160,
+      "sha256": "84c9bc522ea53e08eb54da54e084f405b5a1ef98026742551880553be67527b6"
+    },
+    {
+      "path": "runtime/pfnt/MFCANS32.DLL",
+      "size": 136672,
+      "sha256": "7838a51bdee80494bc7421e2f17c5b8a85c442b990006543d6d53d87e143eb60"
+    },
+    {
+      "path": "runtime/pfnt/MFCO30.DLL",
+      "size": 149504,
+      "sha256": "dc82694d8d0a31b5f17d7da16ad7d18257c2882232581e5d73326f91b381049f"
+    },
+    {
+      "path": "runtime/pfnt/MFCUIA32.DLL",
+      "size": 116704,
+      "sha256": "6c5ef5c081cd845ff80b6884b3f17fef46f1027f96356d9a4e5e8671aa2f678d"
+    },
+    {
+      "path": "runtime/pfnt/MSVCRT20.DLL",
+      "size": 243200,
+      "sha256": "e93215473c8dda1add068bbeb7f0f168084ab2aff57f0a367176884a282eb55e"
+    },
+    {
+      "path": "runtime/pfnt/MyControls.dll",
+      "size": 20480,
+      "sha256": "50063eb0cbfd22a28d098ce4832419e58126fc5d3c1266903c5b3c876e62e409"
+    },
+    {
+      "path": "runtime/pfnt/Nametab.mdb",
+      "size": 124928,
+      "sha256": "db8a7e8ad9a0fd0c1d5bab8b0a2a917b85f922bf8e957aad7f8f5dd7bf8c04a5"
+    },
+    {
+      "path": "runtime/pfnt/Pfcard.def",
+      "size": 21136,
+      "sha256": "06e0f1970759290bd7c327c2eaea3759c1ab504129f43e6a27348443e621ef2c"
+    },
+    {
+      "path": "runtime/pfnt/VOLTCLR.DLL",
+      "size": 27136,
+      "sha256": "5b191388a272e629910041bbd7269d19e2bc0bb4a6a6e49b733f1f6ed48269f4"
+    },
+    {
+      "path": "runtime/pfnt/Voltclr4.dll",
+      "size": 57344,
+      "sha256": "a1190e2156e9495f1a98f5d96cc32b239e73a3e888fd72dbf149d26e105d3953"
+    },
+    {
+      "path": "runtime/pfnt/msvcrt.dll",
+      "size": 280576,
+      "sha256": "df9f2aab7f7119f214c5d743d961fde4bf324f19011fbbb7e9cf666856fba0ba"
+    },
+    {
+      "path": "runtime/pfnt/pfnt.exe",
+      "size": 5533696,
+      "sha256": "0d3f4ffe76d6b7261573570977ea77102dc1bc9674fef39ef10216139ad65f80"
+    },
+    {
+      "path": "samples/ieee90/EditFilePath.txt",
+      "size": 28,
+      "sha256": "caba6d163405aa9d097870227cf8447c88e6fee5d7c5a0db3c559c969311a8f6"
+    },
+    {
+      "path": "samples/ieee90/IEEE90.BSE",
+      "size": 5093,
+      "sha256": "1aa01fdd50ae3468067dc591cfca0034ec1e4755ebc3a5212e19414a8c160919"
+    },
+    {
+      "path": "samples/ieee90/IEEE90.DXT",
+      "size": 3931,
+      "sha256": "02b59209ecf8b76bc3b183b6b1c8ab966c12e206d978c81c2b8f8241c6b56b8a"
+    },
+    {
+      "path": "samples/ieee90/IEEE90.MAP",
+      "size": 926,
+      "sha256": "506da093f47d1971c7b9adfb091a5dc028933a43788108672d1271754efcbcbf"
+    },
+    {
+      "path": "samples/ieee90/IEEE90.dxf",
+      "size": 22475,
+      "sha256": "8460990894ff38760178a8802ab1a695808e882510fc272c41f818788ab3a341"
+    },
+    {
+      "path": "samples/ieee90/ieee90.CUR",
+      "size": 1682437,
+      "sha256": "eb63f81242f6d7dc485907af6fd1966222e55b690b94242f2ebcb218b5c220d8"
+    },
+    {
+      "path": "samples/ieee90/ieee90.Ltp",
+      "size": 12446,
+      "sha256": "5bab58dfdb7a269003563e2220ea9f78d407495458d01dd899203a1da36a6c15"
+    },
+    {
+      "path": "samples/ieee90/ieee90.OUT",
+      "size": 5647162,
+      "sha256": "db22e8ce3e895fcaf1bacf208e47f3a935d60f05f1791800887b0c58182f1478"
+    },
+    {
+      "path": "samples/ieee90/ieee90.PFL",
+      "size": 6294,
+      "sha256": "6c163b2d0cc5ef4e7bfb4255e8ef82800b81679809505193e598786c35c8babb"
+    },
+    {
+      "path": "samples/ieee90/ieee90.dat",
+      "size": 1510,
+      "sha256": "74ff97b1d680ce499b0ac3de53d4a5a9bd1d5728917dac2974e2335351312708"
+    },
+    {
+      "path": "samples/ieee90/ieee90.err",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "samples/ieee90/ieee90.mtb",
+      "size": 10260,
+      "sha256": "7be3021a328badbfa6bd04e0085555172276eb8276569ffd0cb58beaa4ee62d2"
+    },
+    {
+      "path": "samples/ieee90/ieee90.sss",
+      "size": 158,
+      "sha256": "de0a47d3585f22cacf4fa2d61bc091597e3a1359bd7b8c3502677b5b87d9ea6f"
+    },
+    {
+      "path": "samples/ieee90/ieee90.swi",
+      "size": 2225,
+      "sha256": "1f2422b993bc0b617ebc43a603af70d532f5b7b5d9b3ddc30858b491c2def1a9"
+    },
+    {
+      "path": "samples/ieee90/ieee90_SubNetInfo.out",
+      "size": 986,
+      "sha256": "8f563b8271f2f6935800f7234986e34f2a52be5b36cd0e7d9d6af3ff02a5787f"
+    },
+    {
+      "path": "samples/library/2DC/2DC.CUR",
+      "size": 50117,
+      "sha256": "f14e996432c2d785192e2527a3277ab6cfd657223e249b1121ef40aa07a9b5c3"
+    },
+    {
+      "path": "samples/library/2DC/2DC.DAT",
+      "size": 1886,
+      "sha256": "a1e1a3cab3325e6030a86e1f1808c25b8ddce7115c2c4ac5647e13d668a45996"
+    },
+    {
+      "path": "samples/library/2DC/2DC.DBR",
+      "size": 533,
+      "sha256": "5f5d0994ca201a489d6e57fa7414ad18e19d173eb8a10ee936c85936d9bfe9ac"
+    },
+    {
+      "path": "samples/library/2DC/2DC.LIS",
+      "size": 2045,
+      "sha256": "86b0f1582938c4636706edce0b729815b5ccfc02264f1e994f00985270383395"
+    },
+    {
+      "path": "samples/library/2DC/2DC.SCC",
+      "size": 2410,
+      "sha256": "2a07e858fed8719d0c20c33c7d38ca388ed1decb4e6f830a62d87a99354ea932"
+    },
+    {
+      "path": "samples/library/2DC/2DC.SWI",
+      "size": 1816,
+      "sha256": "a8b658dfa37666e7e40450f77251faadcf321aee9ef66010ed3b865045025de3"
+    },
+    {
+      "path": "samples/library/2DC/2DC.opt",
+      "size": 8,
+      "sha256": "770862bc2f42abb04687b4b131c1007294280488f90026df2f57d56279dab1fe"
+    },
+    {
+      "path": "samples/library/2DC/2DC.out",
+      "size": 321034,
+      "sha256": "ae956634d36019cc489018f5fa86cb8e6a39b495893ddc38780034bc732bf28e"
+    },
+    {
+      "path": "samples/library/2DC/2DC.pfo",
+      "size": 60164,
+      "sha256": "8e525ccc906aaa573f5b73c72d97c4c0f226cdb040c19779d287ba3fa1ee3034"
+    },
+    {
+      "path": "samples/library/2DC/2DC.sol",
+      "size": 92469,
+      "sha256": "7d5462e81fbbf880fdf89e741016fd501c1465427edf182d83d72a88d2a26a01"
+    },
+    {
+      "path": "samples/library/2DC/2dc.DXT",
+      "size": 3293,
+      "sha256": "015578cc80822322f7ac74f6dd59dc46023c93bded9bb60dbab98d0c72af4a94"
+    },
+    {
+      "path": "samples/library/2DC/2dc.SCR",
+      "size": 3511,
+      "sha256": "c24bcdf327fd9fa45b8a032245cca3c5d4d31a33aaf5701db602c45b35d3e913"
+    },
+    {
+      "path": "samples/library/2DC/2dc.SWC",
+      "size": 401,
+      "sha256": "3aa5035c56b7312ef40172985c2a68bb481c5a86f259647157734e71c93ba7a3"
+    },
+    {
+      "path": "samples/library/2DC/2dc.bse",
+      "size": 6024,
+      "sha256": "2e0b0a349c0de350aa5fe9bb6ef2b1aba70e54ec45db4411b738321bf1d91bfb"
+    },
+    {
+      "path": "samples/library/2DC/2dc.map",
+      "size": 1354,
+      "sha256": "0c3cde6b66fadf962aff74e1b27158af9afd9539850f9cc0c62dde20b516a0e9"
+    },
+    {
+      "path": "samples/library/2DC/PWRFLO.DIS",
+      "size": 13250,
+      "sha256": "eba173925f3f787fd9703379bfe1948a5a3a1eaab76fbb2c58359ffd2b8d3a76"
+    },
+    {
+      "path": "samples/library/2DC/SWING.DIS",
+      "size": 4723,
+      "sha256": "e9156f61cbcfb2459ac2b9b5f90cfcfbb16c86c0a4ad1e1de0c168a25275cbc9"
+    },
+    {
+      "path": "samples/library/2DC/output.lis",
+      "size": 1032,
+      "sha256": "36aefb8cb3db4e0e33b7e1b23b74e040d4bed5c8f9372753d10a3770c9ad5ddf"
+    },
+    {
+      "path": "samples/library/HPN/HBNW1.dat",
+      "size": 22808,
+      "sha256": "df42c77054d61f74941a3476ce97541d105f79b50498cba701746e30bd8b0a5f"
+    },
+    {
+      "path": "samples/library/HPN/HBNW1.swi",
+      "size": 6435,
+      "sha256": "fb6d0035d316c3d0b4dad5dc9b2e190a4000da5b6cff6e07deea9da8bc8602fb"
+    },
+    {
+      "path": "samples/library/HPN/hbnw1.CK",
+      "size": 12336,
+      "sha256": "136bde62e0b47b91d6f13814741872e4dd9d0af54d16c746ed3a251933e36b65"
+    },
+    {
+      "path": "samples/library/HPN/hbnw1.bse",
+      "size": 59943,
+      "sha256": "db1ff1918ddbc341b0113b52880810703990def12e47c407d709cb5a38d9d711"
+    },
+    {
+      "path": "samples/library/HPN/hbnw1.fpss",
+      "size": 6061,
+      "sha256": "54f345c309e84807e3e4c2c63542fb344bbf09c1524e0810f2b800391fa8ee8a"
+    },
+    {
+      "path": "samples/library/HPN/hbnw1.lam",
+      "size": 2010,
+      "sha256": "2f4ab92c8509ff3772eb927e9afb25140fbcc1b55e239f7eb95bbaf9badad822"
+    },
+    {
+      "path": "samples/library/HPN/hbnw1.mu0",
+      "size": 4179,
+      "sha256": "38d0f6860ed1ae498ebcab4ba5eef48d5a64f40c8ec5b68e1212fae1abf11e48"
+    },
+    {
+      "path": "samples/library/HPN/hbnw1.pf",
+      "size": 6661,
+      "sha256": "c93e3a2a28466a390688bab685f44d3657dc36444a9a460e262e25ccf909cf5a"
+    },
+    {
+      "path": "samples/library/HPN/hbnw1.pfs",
+      "size": 6207,
+      "sha256": "6de42047fc886d13a961d52954844b48db715a9db5fd8bfdfa7f73dfec343d83"
+    },
+    {
+      "path": "samples/library/HPN/hbnw1.sga",
+      "size": 19517,
+      "sha256": "24290eeff70ca7b7c68e6aa3b06d87fab1e56990a9ad126a82f0e579cd210433"
+    },
+    {
+      "path": "samples/library/HPN/hnbw1.DXT",
+      "size": 28815,
+      "sha256": "78c975ef177dbae631115df9132e543febaa82f544eca5ad8549266de1b691a6"
+    },
+    {
+      "path": "samples/library/IEEE9/EditFilePath.txt",
+      "size": 28,
+      "sha256": "caba6d163405aa9d097870227cf8447c88e6fee5d7c5a0db3c559c969311a8f6"
+    },
+    {
+      "path": "samples/library/IEEE9/IEEE90.BSE",
+      "size": 5093,
+      "sha256": "e3e05368fb8836b0f16fddff14e8128f68412ee0a39974607c21cbdde2c3214c"
+    },
+    {
+      "path": "samples/library/IEEE9/IEEE90.DAT",
+      "size": 1395,
+      "sha256": "e6e2c65e082a1c68df9fd9d02d78c7f4cc4f8712b718d57073358d6e8fb0d2ec"
+    },
+    {
+      "path": "samples/library/IEEE9/IEEE90.MAP",
+      "size": 962,
+      "sha256": "8330e253bf5921e0a3b29e9700c7f76ac2400d159551d56db8e98f8b7871829f"
+    },
+    {
+      "path": "samples/library/IEEE9/IEEE90.SWI",
+      "size": 1576,
+      "sha256": "73353b7e50187398013be6819bcbb98307f9e0476ce0f686e2ba1a3ecca43f05"
+    },
+    {
+      "path": "samples/library/IEEE9/ieee90.CUR",
+      "size": 43081,
+      "sha256": "a10df27f44c26928ec47d329f4f8d4d1f7d482a19aa2c6772689fefddadb49b6"
+    },
+    {
+      "path": "samples/library/IEEE9/ieee90.OUT",
+      "size": 160362,
+      "sha256": "8fc3e36cca003b16bda9b829231e1c49fffbbc04e7bb68256843a6accf5d17e8"
+    },
+    {
+      "path": "samples/library/IEEE9/ieee90.PFL",
+      "size": 6294,
+      "sha256": "14e4dd8c8e691037edf8c6109dd00983b6c8f6f36b4e9cd9f592f18a24621d1c"
+    },
+    {
+      "path": "samples/library/IEEE9/ieee90.SWX",
+      "size": 56412,
+      "sha256": "ba3d9940744001674ca8a6b338b50b6b6b1fb5f2f9231a75dc014810ecf1e3a7"
+    },
+    {
+      "path": "samples/library/IEEE9/ieee90.err",
+      "size": 1415,
+      "sha256": "d963a09f3fb868fddb93d6e236a915516cfb6536d82c9e8b5646eac471e21fa9"
+    },
+    {
+      "path": "samples/library/IEEE9/ieee90.pfo",
+      "size": 27354,
+      "sha256": "a3441d6e580b43ee222630da3835d62726c1faf64f44fe2e5d4c8436fa7f48b1"
+    },
+    {
+      "path": "samples/library/SX10/SX10.DAT",
+      "size": 70366,
+      "sha256": "7017500c387e39d613576089218998be632cf79233284ece9cf78aec51cc2fad"
+    },
+    {
+      "path": "samples/library/SX10/SX10.SWI",
+      "size": 20333,
+      "sha256": "3385129955a67f5ce94031fca34f93ed6e12180b9b6f5a769040cdd9dd29efcb"
+    },
+    {
+      "path": "samples/library/SX10/SXR.CON",
+      "size": 1139,
+      "sha256": "65944cfb461364b8549743c633a256ecb765803959bf4acc31be698f564948d8"
+    },
+    {
+      "path": "samples/library/SX10/SXR.DAT",
+      "size": 30895,
+      "sha256": "15682660e28a64306bdac67fd0d25d046061e2fff45923d957be107117a7dc8a"
+    },
+    {
+      "path": "samples/library/SX10/SXR.SWI",
+      "size": 13767,
+      "sha256": "8d701dc88bbcdf5d67bc25cf7e3397952f2018210d9bc4cce22834cf402e69cd"
+    },
+    {
+      "path": "samples/library/SX10/Sx10.pfo",
+      "size": 432622,
+      "sha256": "e9d1bd38218ec58da1bbf19e9eaae63b834970f37e5665b62c77cfb9d1aa2421"
+    },
+    {
+      "path": "samples/library/SX10/sx10.bse",
+      "size": 160499,
+      "sha256": "799accab1a71d7887ccb62135b8768be37b0327e94747bb93965bc7bf4a2d7a8"
+    },
+    {
+      "path": "samples/library/SX10/sx10.map",
+      "size": 48816,
+      "sha256": "90e6c9f60f22f0335b74f44901d514387bf25e66656d14521321b9b3af13bfe0"
+    }
+  ]
+}

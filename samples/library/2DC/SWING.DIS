@@ -1,0 +1,36 @@
+ Enter the power flow base file name > C:\PSAP32\SAMPLE\2DC\2dc.bse
+ Enter the swing data file name > C:\PSAP32\SAMPLE\2DC\2DC.SWI
+ ENTERING ROUTINE SWINGM                                                                                                             
+ ENTERING ROUTINE TAPEWK                                                                                                             
+ ENTERING ROUTINE INPUT1                                                                                                             
+ ENTERING ROUTINE SDATA                                                                                                              
+ ENTERING ROUTINE INPUT1                                                                                                             
+ ENTERING ROUTINE INPUT2                                                                                                             
+ ENTERING ROUTINE LODINP                                                                                                             
+ ENTERING ROUTINE INPUT3                                                                                                             
+ ENTERING ROUTINE INITL1                                                                                                             
+ ENTERING ROUTINE INITL2                                                                                                             
+ ENTERING ROUTINE DCINP                                                                                                              
+ ENTERING ROUTINE INITL3                                                                                                             
+ ENTERING ROUTINE INITL4                                                                                                             
+ ENTERING ROUTINE LSCHK                                                                                                              
+ ENTERING ROUTINE REDUCE                                                                                                             
+ ENTERING ROUTINE REDUCE                                                                                                             
+ *** WARNING     ANGLE OF OVERLAP AT INVERTER 113.00 EXCEEDS 60 DEGREES.  ANGLE =   80.00                                *** WARNING 
+ *** WARNING     ANGLE OF OVERLAP AT INVERTER 113.00 EXCEEDS 60 DEGREES.  ANGLE =  180.00                                *** WARNING 
+ *** WARNING     ANGLE OF OVERLAP AT INVERTER 113.00 EXCEEDS 60 DEGREES.  ANGLE =   80.00                                *** WARNING 
+ *** WARNING     ANGLE OF OVERLAP AT INVERTER 113.00 EXCEEDS 60 DEGREES.  ANGLE =   80.00                                *** WARNING 
+ *** WARNING     ANGLE OF OVERLAP AT INVERTER 113.00 EXCEEDS 60 DEGREES.  ANGLE =  180.00                                *** WARNING 
+ ENTERING ROUTINE REDUCE                                                                                                             
+ *** WARNING     ANGLE OF OVERLAP AT INVERTER 113.00 EXCEEDS 60 DEGREES.  ANGLE =  180.00                                *** WARNING 
+ ENTERING ROUTINE OUTPUT1                                                                                                            
+ ENTERING ROUTINE OUTPUT2                                                                                                            
+ *** WARNING   BRANCH NORTH    500.0 STATIONN 500.0  3 COULD NOT BE FOUND                                                *** WARNING 
+ *** WARNING   BRANCH STATIONN 500.0 STATIONS 500.0  3 COULD NOT BE FOUND                                                *** WARNING 
+ ENTERING ROUTINE LINEOUT                                                                                                            
+ ENTERING ROUTINE GENOUT                                                                                                             
+ ENTERING ROUTINE BUSOUT                                                                                                             
+ ENTERING ROUTINE DCOUT                                                                                                              
+ ENTERING ROUTINE CALPLT                                                                                                             
+  MODULE "COMPLETE RUN" PROCESSED:  ELAPSED CP TIME =     .00                                                                        
+  PROCESS TIME =     .00 WALL CLOCK 10:14:41 PAGE FAULTS =       0                                                                   

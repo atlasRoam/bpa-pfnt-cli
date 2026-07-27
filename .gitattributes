@@ -1,0 +1,10 @@
+*.exe binary
+*.dll binary
+*.bse binary
+*.mdb binary
+runtime/** -text -diff
+samples/** -text -diff
+MANIFEST.json text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.yml text eol=lf

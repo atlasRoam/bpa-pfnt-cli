@@ -1,0 +1,69 @@
+/INPUT_DATA\
+>DATA_FROM=BPA<
+>OLD_DAT=sx10<
+>OLD_SWI=sx10<
+>OLD_BSE=sx10<
+/OUTPUT_DATA\
+>DATA_TO=BPA<
+>NEW_DAT=sxr<
+>NEW_SWI=sxr<
+>NEW_BSE=sxr<
+/STUDY_AREA\
+>SAVE_ZONES=01,02,03,SC<
+/PROCESS_CONTROL\
+>DEBUG  00001111111222
+>DIVIDE=NO<
+>COHREDUCT=ON<
+>REDUCT=CSR<
+>AGGREGATE=AGG<
+/MANUAL_GROUP_GEN.\
+>GROUP 1<
+B                 HN
+>GROUP 2<
+B                 XL
+>GROUP 3<
+B                 YM
+>GROUP 4<
+B                 LY
+>GROUP 5<
+B                 YH
+>GROUP 6<
+B                 XF
+>GROUP 7<
+B                 JX
+>GROUP 8<
+B                 HU
+>GROUP 9<
+B                 CH
+>GROUP 10<
+B                 GZ
+>GROUP 11<
+B                 ZJ
+>GROUP 12<
+B                 YY
+>GROUP 13<
+B                 SH
+>GROUP 14<
+B                 CS
+>GROUP 15<
+B                 AH
+>GROUP 16<
+B                 HG
+>GROUP 17<
+B                 YL
+>GROUP 18<
+B                 CD
+>GROUP 19<
+B                 CN
+>GROUP 20<
+B                 HJ
+>GROUP 21<
+B                 CX
+>GROUP 22<
+B                 PX
+>GROUP 0<
+/CSR_METHOD REDUCT NETWORK\
+>MIDERROR=.001<
+>FINERROR=.01<
+/END\ 
+

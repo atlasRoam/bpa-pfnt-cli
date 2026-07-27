@@ -1,0 +1,12 @@
+
+.....At     0.000000 sec., the number of islanding system is 1, and this is the 0th whole newtork topology analysising.    .......
+ .....Zone name in Islanding system No 1-1(1 totally): 01 
+ --Islanding system No1 includes: Zone total: 1, Bus Total: 9, Gen Total: 3(   353.88MW), Load Total: 4(   350.00MW)
+    --Zone name in Islanding system No 1: 01 
+    --Bus information in Islanding system No 1:
+       BusName    BaseKv   Zone  GenNow(MW)  LoadNow(MW) || BusName    BaseKv    GenNow(MW)  LoadNow(MW) 
+          GEN1  16.50    01     105.88       0.00 ||          GEN1 230.00    01       0.00       0.00 
+          GEN2  18.00    01     163.00       0.00 ||          GEN2 230.00    01       0.00      35.00 
+          GEN3  13.80    01      85.00       0.00 ||          GEN3 230.00    01       0.00       0.00 
+      STATIONA 230.00    01       0.00     125.00 ||      STATIONB 230.00    01       0.00      90.00 
+      STATIONC 230.00    01       0.00     100.00 || 

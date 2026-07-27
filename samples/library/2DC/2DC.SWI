@@ -1,0 +1,40 @@
+CASE PFDC2                                           
+.LS  RECTFIER113.  INVERTER113.  5   5
+LS  SOUTH   500.  STATIONS500. 1    1   0.0
+LS  SOUTH   500.  STATIONS500. 1   -1   5.0
+MC NORTH G120.0 4000.               .01                                      2.
+MC NORTH G220.0 4000.               .01                                      2.
+MC NORTH G320.0 4000.               .01                                      2.
+MC SLACK   20.0 4000.               .006                                     2.
+M  SOUTH G120.0 1511. .9      H      .2   .2   .064.08
+MF SOUTH G120.0  7238.      1511 0.0.35  .7   0.9  0.7  7.6 0.0 0.18         2.
+EJ SOUTH G120.0 0.0  30.0 .04 .0 -6.0                -3.224.03 0.0 .7
+GH SOUTH G120.0 2000. .05  .25  .04  5.0  0.5  0.2  0.3  .25
+D  RECTFIER113.      .09  .03 4.60  .012 249.P 1.2   0. 100.                   1
+D  INVERTER113.      .09  .03 4.60  .012 249.P 1.2  .10 100.                   1
+LB SOUTH   500.             0.5  0.5            0.5  0.5           1.8  -2.
+LB STATIONN500.             0.5  0.5            0.5  0.5           1.8  -2.
+LB STATIONS500.             0.5  0.5            0.5  0.5           1.8  -2.
+LN RECTFIER113.
+LN INVERTER113.
+FF      1.0 250.
+90
+MH
+BH
+B  NORTH   500.  3
+B  SOUTH   500.  3
+B  STATIONN500.  3
+B  STATIONS500.  3
+GH    SLACK   20.0                           1
+G  NORTH G120.0    3  3           3  3        3                              
+G  SOUTH G120.0    3  3           3  3        3
+G  SLACK   20.0    3  3           3  3        3
+LH  1   3500.  -500.
+L  NORTH   500. STATIONN500. 3    3  3
+L  STATIONN500. STATIONS500. 3    3  3
+L  NORTH   500. RECTFIER113.      3  3
+L  SOUTH   500. INVERTER113.      3  3              
+DH
+D  RECTFIER113. INVERTER113.   3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+99
+
